@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/corlovito/spring_k8s/k8s/?ref=main
+- github.com/corlovito/pollar-deployment/kubernetes/applications/catalog-service/staging/?ref=main
 
 patchesStrategicMerge:
 - patch-env.yml
