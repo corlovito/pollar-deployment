@@ -4,8 +4,6 @@ kind: Kustomization
 resources:
 - github.com/corlovito/pollar-deployment/kubernetes/applications/catalog-service/staging/?ref=main
 
-patchesStrategicMerge:
-- patch-env.yml
 
 configMapGenerator:
 - behavior: merge
@@ -21,3 +19,5 @@ images:
 replicas:
 - count: 2
   name: catalog-service
+patches:
+- path: patch-env.yml
