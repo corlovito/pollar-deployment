@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/corlovito/pollar_deployment/tree/main/catalog_service/staging/?ref=main
+  - github.com/corlovito/spring_k8s//k8s?ref=main
 
 
 configMapGenerator:
@@ -12,9 +12,9 @@ configMapGenerator:
   name: catalog-config
 
 images:
-- name: catalog-service
+- name: ghcr.io/corlovito/spring_k8s
   newName: ghcr.io/corlovito/spring_k8s
-  newTag: chapter_14
+  newTag: latest
 
 replicas:
 - count: 2
